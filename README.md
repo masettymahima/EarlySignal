@@ -2,8 +2,9 @@
 
 # EarlySignal: Democratizing public health and accelerating grassroots outbreak response with AI
 
-<!-- IMAGE: Logo -->
-<img src="docs/images/logo.png" width="200">
+<div align="center">
+  <img src="docs/images/Logo.png" width="450" alt="Early Signal logo">
+</div>
 
 </div>
 
@@ -22,7 +23,7 @@ EarlySignal is an AI-powered mobile platform designed to crowdsource early indic
 4. [Market Fit and Potential](#4-market-fit-and-potential)
 5. [Future Works](#5-future-works)
 6. [Tools Used](#6-tools-used)
-7. [About the Team](#7-about-the-team)
+7. [The Team Behind the App](#7-the-team-behind-the-app)
 8. [References & Acknowledgements](#8-references--acknowledgements)
 
 ---
@@ -169,22 +170,33 @@ Each step moves the system closer to a living, decentralized network for public-
 
 ---
 
-## 7. About the Team
-[Alex Rivera](https://www.linkedin.com/in/alexrivera) 
-[Priya Mehta](https://www.linkedin.com/in/priyamehta) 
-[Jordan Lee](https://www.linkedin.com/in/jordanlee) 
-[Mahima Masetty](https://www.linkedin.com/in/mahimamasetty) 
+## 7. The Team Behind the App
+
+<table>
+  <tr>
+    <td><img src="docs/images/mahima_headshot.png" width="80" style="border-radius:50%;"></td>
+    <td><a href="https://www.linkedin.com/in/mmahima"><b>Mahima Masetty</b></a></td>
+  </tr>
+  <tr>
+    <td><img src="docs/images/halle_headshot.png" width="80" style="border-radius:50%;"></td>
+    <td><a href="https://www.linkedin.com/in/halleluya-mengesha"><b>Halleluya Mengesha</b></a></td>
+  </tr>
+  <tr>
+    <td><img src="docs/images/sumasree_headshot.png" width="80" style="border-radius:50%;"></td>
+    <td><a href="https://www.linkedin.com/in/sumasreeragi"><b>Sumasree Ragi</b></a></td>
+  </tr>
+  <tr>
+    <td><img src="docs/images/hira_headshot.png" width="80" style="border-radius:50%;"></td>
+    <td><a href="https://www.linkedin.com/in/hirastanley95"><b>Hira Stanley</b></a></td>
+  </tr>
+</table>
+
 
 
 ---
 
 ## 8. References & Acknowledgements
 <!-- Add citations or project credits here -->
-Examples:
-- [HealthMap Project – Boston Children’s Hospital](#)  
-- [Flu Near You (CDC & Harvard Pilgrim Institute)](#)  
-- [BlueDot – AI Epidemic Intelligence](#)  
-- [U.S. CDC Syndromic Surveillance Reports](#)
 
 ---
 
