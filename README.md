@@ -161,6 +161,8 @@ Each step moves the system closer to a living, decentralized network for public-
 
 | **Category** | **Tools & Frameworks** |
 |:--|:--|
+| **Design** | Adobe Photoshop, Canva, Visio |
+| **Project Management** | Trello |
 | **Front-End Development** | Flutter (Dart), Google Maps SDK, Firebase Authentication |
 | **Back-End Development** | FastAPI, Firebase Cloud Functions, BigQuery |
 | **AI / NLP** | Gemini 2.5 Flash, LangGraph Orchestrator, SentenceTransformers |
@@ -174,7 +176,7 @@ Each step moves the system closer to a living, decentralized network for public-
 
 <table>
   <tr>
-    <td><img src="docs/images/mahima_headshot.png" width="80" style="border-radius:50%;"></td>
+    <td><img src="docs/images/mahima_headshot.jpg" width="80" style="border-radius:50%;"></td>
     <td><a href="https://www.linkedin.com/in/mmahima"><b>Mahima Masetty</b></a></td>
   </tr>
   <tr>
