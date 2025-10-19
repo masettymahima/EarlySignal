@@ -218,7 +218,7 @@ Each step moves the system closer to a decentralized, democratized network for p
 | **Project Management** | Trello |
 | **Language** | Dart, Python, SQL, JavaScript |
 | **Front-End Development** | Flutter, Google Maps SDK, Firebase Authentication |
-| **Back-End Development** | FastAPI, Firebase Cloud Functions, BigQuery |
+| **Back-End Development** | FastAPI, Firebase Cloud Functions |
 | **LLM** | Gemini 2.5 Flash, LangGraph Orchestrator |
 | **Data Storage & Analytics** | BigQuery |
 | **Deployment** | Google Cloud Platform (GCP), Firebase Hosting |
