@@ -31,11 +31,11 @@ EarlySignal is an AI-powered mobile platform designed to crowdsource early indic
 
 ## 1. 💡 Project Motivation
 
-When outbreaks strike, official data often lags behind lived experience.  
-EarlySignal was designed to close that gap — turning community observations into real-time intelligence.
+When outbreaks strike, official data often lags behind lived experience. EarlySignal was designed to close that gap — turning community observations into real-time intelligence.
 
-Imagine Leah, a mother in Chicago whose child wakes up with a rash and fever. She opens the EarlySignal app, chats with an AI assistant that helps her record symptoms, and instantly sees whether similar cases are appearing nearby.  
-Or Aiden, an immunocompromised student who checks the app before heading to class to see if respiratory illnesses are rising on campus.
+Imagine:
+Leah, a mother in Chicago whose child wakes up with a rash and fever. She opens the EarlySignal app, chats with an AI assistant that helps her record symptoms, and instantly sees whether similar cases are appearing nearby.  
+Aiden, an immunocompromised student who checks the app before heading to class to see if respiratory illnesses are rising on campus.
 
 Both use EarlySignal for the same purpose: to protect themselves and their community through faster, smarter information.
 
@@ -66,8 +66,7 @@ Users contribute health data → AI interprets and classifies it → spatial mod
 
 ### 3.1 🤖 LLM Chatbot — Personal Health Intake and Guidance
 
-At the center of EarlySignal is a conversational agent built on *LangGraph*, a framework for structuring multi-step AI dialogues.  
-The chatbot is powered by *Google’s Gemini 2.5 Flash* LLM model, which enables fast, contextual understanding of user symptoms and conversational health guidance.
+At the center of EarlySignal is a conversational agent built on *LangGraph*, a framework for structuring multi-step AI dialogues. The chatbot is powered by *Google’s Gemini 2.5 Flash* LLM model, which enables fast, contextual understanding of user symptoms and conversational health guidance.
 
 When a user opens the app, the chatbot:
 
@@ -107,7 +106,7 @@ This approach merges personalized AI care with community-level insight, bridging
 
 ### 3.2 🚨 Alert System — Detecting Emerging Outbreaks
 
-Every report from the chatbot feeds into a unified analytical pipeline hosted in *BigQuery*.  
+Every report from the chatbot feeds into a unified analytical pipeline hosted in *BigQuery*. 
 The alert system identifies patterns of illness activity across neighborhoods and within localized clusters, combining both into one cohesive feed.
 
 **1. Every report becomes a data point**  
@@ -171,9 +170,6 @@ Traditional public health reporting is largely reactive, with data often release
 EarlySignal shifts this paradigm toward community-rooted, real-time detection.  
 
 By combining peer-to-peer symptom reporting with AI-driven spatial clustering, the system surfaces emerging health signals at a fraction of the time and cost of centralized infrastructures.  
-Even a few days of earlier awareness can translate to significant economic and health impact by reducing outbreak costs, preventing secondary cases, and enabling faster local action.
-
----
 
 ### Quantitative Comparison
 
@@ -184,12 +180,7 @@ Even a few days of earlier awareness can translate to significant economic and h
 | **Geographic precision** | County/City/State level | Census tract level | 10× finer |
 | **Frequency of updates** | Weekly | Continuous | Real-time |
 
----
-
-By combining peer-to-peer symptom reporting with AI-driven spatial clustering, the system surfaces emerging health signals at a fraction of the time and cost of centralized infrastructures.  
 Even a few days of earlier awareness can translate to significant economic and health impact by reducing outbreak costs, preventing secondary cases, and enabling faster local action.
-
----
 
 ### Use Cases
 
@@ -198,8 +189,7 @@ Even a few days of earlier awareness can translate to significant economic and h
 - NGOs or emergency teams deploying in disaster zones.  
 - Communities tracking seasonal illnesses or post-event exposures.  
 
-Comparable initiatives such as *HealthMap* and *Flu Near You* have demonstrated the power of participatory surveillance.  
-EarlySignal builds upon these successes with AI-assisted triage, tract-level precision, and continuous data flows** — offering faster, finer, and more scalable public health intelligence.
+Comparable initiatives such as *HealthMap* and *Flu Near You* have demonstrated the power of participatory surveillance. EarlySignal builds upon these successes with AI-assisted triage, tract-level precision, and continuous data flows** — offering faster, finer, and more scalable public health intelligence.
 
 As adoption grows, anonymized data could inform early-intervention strategies, guide testing resources, and ultimately reduce outbreak impact on both local and national levels.
 
