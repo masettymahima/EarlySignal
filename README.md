@@ -220,7 +220,7 @@ Each step moves the system closer to a decentralized, democratized network for p
 | **Front-End Development** | Flutter, Google Maps SDK, Firebase Authentication |
 | **Back-End Development** | FastAPI, Firebase Cloud Functions |
 | **LLM** | Gemini 2.5 Flash, LangGraph Orchestrator |
-| **Data Storage & Analytics** | BigQuery |
+| **Data Storage** | BigQuery |
 | **Deployment** | Google Cloud Platform (GCP), Firebase Hosting |
 | **Visualization** | Flutter Charts and Custom Dashboards, BigQuery Views |
 
