@@ -55,7 +55,8 @@ EarlySignal brings together three interconnected systems:
 <!-- IMAGE: Overview Diagram -->
 <img src="docs/images/earlysignal_overview.png" width="200">
 
-Together, these components form an end-to-end loop: users contribute health data → AI interprets and classifies it → spatial models detect anomalies → the community receives early warnings.
+Together, these components form an end-to-end loop: 
+Users contribute health data → AI interprets and classifies it → spatial models detect anomalies → the community receives early warnings.
 
 ---
 
@@ -215,7 +216,7 @@ Each step moves the system closer to a decentralized, democratized network for p
     <td><a href="https://www.linkedin.com/in/halleluya-mengesha"><b>Halleluya Mengesha</b></a></td>
   </tr>
   <tr>
-    <td><img src="documents/images/sumasree_headshot.png" width="80" style="border-radius:50%;"></td>
+    <td><img src="documents/images/sumasree_headshot.jpg" width="80" style="border-radius:50%;"></td>
     <td><a href="https://www.linkedin.com/in/sumasreeragi"><b>Sumasree Ragi</b></a></td>
   </tr>
   <tr>
