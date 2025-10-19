@@ -66,7 +66,7 @@ Users contribute health data → AI interprets and classifies it → spatial mod
 
 ### 3.1 🤖 LLM Chatbot — Personal Health Intake and Guidance
 
-At the center of EarlySignal is a conversational agent built on *LangGraph*, a framework for structuring multi-step AI dialogues. The chatbot is powered by *Google’s Gemini 2.5 Flash* LLM model, which enables fast, contextual understanding of user symptoms and conversational health guidance.
+At the center of EarlySignal is a conversational agent built on *LangGraph*, a framework for structuring multi-step AI dialogues. The chatbot is powered by *Google’s Gemini 2.0 Flash* LLM model, which enables fast, contextual understanding of user symptoms and conversational health guidance.
 
 When a user opens the app, the chatbot:
 
@@ -157,7 +157,7 @@ EarlySignal combines research-grade AI with accessible mobile technology:
 |:--|:--|
 | **Front End** | Built in Flutter (Dart) for iOS and Android — a single responsive app that handles chat, maps, and dashboards. |
 | **Backend & Cloud** | Firebase Authentication manages logins; Cloud Functions bridge the app with BigQuery for secure data queries. |
-| **AI Orchestration** | LLM agents (Gemini 2.5 Flash) are structured using LangGraph to follow a multi-stage diagnostic flow. |
+| **AI Orchestration** | LLM agents (Gemini 2.0 Flash) are structured using LangGraph to follow a multi-stage diagnostic flow. |
 | **Data & Storage** | BigQuery for report aggregation and alert logic; optional vector search (Pinecone / SentenceTransformers) for symptom similarity. |
 
 This stack demonstrates how consumer-grade devices and cloud AI can collaborate to deliver population-level intelligence at minimal infrastructure cost.
@@ -219,7 +219,7 @@ Each step moves the system closer to a decentralized, democratized network for p
 | **Language** | Dart, Python, SQL, JavaScript |
 | **Front-End Development** | Flutter, Google Maps SDK, Firebase Authentication |
 | **Back-End Development** | FastAPI, Firebase Cloud Functions |
-| **LLM** | Gemini 2.5 Flash, LangGraph Orchestrator |
+| **LLM** | Gemini 2.0 Flash, LangGraph Orchestrator |
 | **Data Storage** | BigQuery |
 | **Deployment** | Google Cloud Platform (GCP), Firebase Hosting |
 | **Visualization** | Flutter Charts and Custom Dashboards, BigQuery Views |
