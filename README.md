@@ -48,9 +48,9 @@ By pairing AI-guided triage with collective intelligence, the project explores a
 ## 2. 🛜 Overview of EarlySignal
 
 EarlySignal brings together three interconnected systems:  
-- an **LLM-powered chatbot** that guides users through symptom reporting and advice,  
-- an **alert system** that analyzes community-level data for emerging clusters, and  
-- a **dashboard suite** that visualizes local trends and risks.  
+- an **LLM-powered chatbot** that guides users through symptom reporting and advice  
+- an **alert system** that analyzes community-level data for emerging clusters  
+- a **dashboard suite** that visualizes local trends and risks
 
 
 <div align="center">
@@ -78,8 +78,8 @@ When a user opens the app, the chatbot:
 Each interaction contributes an anonymized record including symptoms, diagnosis, and geolocation to a secure data store. As more users participate, the system gains “collective wisdom”, i.e., when multiple nearby users report similar patterns, the model refines its diagnostic confidence and improves local accuracy.
 
 **Conversation orchestration** uses LangGraph with explicit state and validators:  
-- State sections include user interaction, history, symptoms, diagnosis, exposure tracking, current location, final outputs, and control flags.  
-- Validators ensure symptoms, locations, and timing inputs are sensible before advancing.
+- State sections include user interaction, history, symptoms, diagnosis, exposure tracking, current location, final outputs, and control flags
+- Validators ensure symptoms, locations, and timing inputs are sensible before advancing
 
 **Node sequence**  
 symptom_collection → extract structured symptoms + onset days  
@@ -87,7 +87,7 @@ diagnosis → LLM proposes diagnosis; may ask up to three clarifying questions
 exposure_collection → extract where and when exposure happened  
 location_collection → collect current city/state then venue or landmark  
 bq_submission → package and write report to BigQuery  
-care_advice → return tailored advice and “when to seek help”
+care_advice → return tailored advice and “when to seek professional medical help”
 
 **Routing rules (conditional edges)**  
 Nodes only proceed when required fields are valid; otherwise, the system pauses and waits for user input.  
@@ -117,14 +117,14 @@ Each report is linked to a census tract—a small geographic area of roughly 1,2
 Within each tract, the system tracks daily case counts and flags unusual increases compared to recent baselines.
 
 **3. Hotspot detection (Cluster-Based Alerts)**  
-Inside each tract, the system looks for groups of reports that occur close together in both space and time.  
-- For respiratory illnesses, clusters are detected within roughly 500 meters.  
-- For other diseases, clusters can span up to 5 miles to capture shared exposure sites such as restaurants, events, or pools.
+Inside each tract, the system looks for groups of reports that occur close together in both space and time
+- For respiratory illnesses, clusters are detected within roughly 500 meters
+- For other diseases, clusters can span up to 5 miles to capture shared exposure sites such as restaurants, events, or pools
 
 **4. Merging neighborhood and cluster signals**  
 The tract and cluster checks run in tandem, creating a single alert layer that shows both types of patterns:  
-- Tract-level trends reveal broad neighborhood activity.  
-- Clusters highlight potential shared locations or exposure events.  
+- Tract-level trends reveal broad neighborhood activity
+- Clusters highlight potential shared locations or exposure events
 Together, they form a comprehensive picture of local disease activity.
 
 **5. Localized alerts in the app**  
@@ -139,9 +139,9 @@ This structure balances neighborhood-level breadth with pinpoint cluster detecti
 
 The app’s dashboard transforms community data into clear, actionable visuals:  
 
-- **Heatmaps** highlight current and historical illness concentrations.  
-- **Pie and trend charts** show disease distribution by category.  
-- **Filters** allow users to explore by radius, exposure type, or timeframe.  
+- **Heatmaps** highlight current and historical illness concentrations 
+- **Pie and trend charts** show disease distribution by category
+- **Filters** allow users to explore by radius, exposure type, or timeframe
 
 Dashboards are generated dynamically from *BigQuery* through *Firebase Cloud Functions* locally in Flutter, ensuring real-time accuracy while keeping user data private and authenticated.
 
@@ -184,10 +184,10 @@ Even a few days of earlier awareness can translate to significant economic and h
 
 ### Use Cases
 
-- Universities and schools monitoring campus health trends.  
-- Local health departments supplementing official surveillance.  
-- NGOs or emergency teams deploying in disaster zones.  
-- Communities tracking seasonal illnesses or post-event exposures.  
+- Universities and schools monitoring campus health trends 
+- Local health departments supplementing official surveillance
+- NGOs or emergency teams deploying in disaster zones
+- Communities tracking seasonal illnesses or post-event exposures
 
 Comparable initiatives such as *HealthMap* and *Flu Near You* have demonstrated the power of participatory surveillance. EarlySignal builds upon these successes with AI-assisted triage, tract-level precision, and continuous data flows** — offering faster, finer, and more scalable public health intelligence.
 
@@ -200,11 +200,11 @@ As adoption grows, anonymized data could inform early-intervention strategies, g
 
 EarlySignal is an evolving platform. While the initial focus is to biild a dense peer-to-peer illness alert system for community welfare, next phases include:
 
-- Partnering with local and state health departments to share aggregated alerts.  
-- Establishing feedback loops with clinics or testing centers to validate diagnoses.  
-- Extending coverage beyond the U.S. with global boundary datasets.   
-- Adding SMS-based reporting for low-connectivity regions.  
-- Expanding the “collective wisdom” logic to continuously re-train diagnostic confidence models.
+- Partnering with local and state health departments to share aggregated alerts
+- Establishing feedback loops with clinics or testing centers to validate diagnoses
+- Extending coverage beyond the U.S. with global boundary datasets
+- Adding SMS-based reporting for low-connectivity regions
+- Expanding the “collective wisdom” logic to continuously re-train diagnostic confidence models
 
 Each step moves the system closer to a decentralized, democratized network for public-health intelligence.
 
@@ -234,7 +234,7 @@ Each step moves the system closer to a decentralized, democratized network for p
     <td><a href="https://www.linkedin.com/in/mmahima"><b>Mahima Masetty</b></a></td>
   </tr>
   <tr>
-    <td><img src="documents/images/halle_headshot.png" width="80" style="border-radius:50%;"></td>
+    <td><img src="documents/images/halle_headshot.jpg" width="80" style="border-radius:50%;"></td>
     <td><a href="https://www.linkedin.com/in/halleluya-mengesha"><b>Halleluya Mengesha</b></a></td>
   </tr>
   <tr>
