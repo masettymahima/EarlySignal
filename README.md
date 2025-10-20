@@ -189,7 +189,7 @@ Even a few days of earlier awareness can translate to significant economic and h
 - NGOs or emergency teams deploying in disaster zones
 - Communities tracking seasonal illnesses or post-event exposures
 
-Comparable initiatives such as *HealthMap* and *Flu Near You* have demonstrated the power of participatory surveillance. EarlySignal builds upon these successes with AI-assisted triage, tract-level precision, and continuous data flows** — offering faster, finer, and more scalable public health intelligence.
+Comparable initiatives such as *HealthMap* and *Flu Near You* have demonstrated the power of participatory surveillance. EarlySignal builds upon these successes with AI-assisted triage, tract-level precision, and continuous data flows — offering faster, finer, and more scalable public health intelligence.
 
 As adoption grows, anonymized data could inform early-intervention strategies, guide testing resources, and ultimately reduce outbreak impact on both local and national levels.
 
