@@ -34,8 +34,8 @@ EarlySignal is an AI-powered mobile platform designed to crowdsource early indic
 When outbreaks strike, official data often lags behind lived experience. EarlySignal was designed to close that gap — turning community observations into real-time intelligence.
 
 Imagine:
-Leah, a mother in Chicago whose child wakes up with a rash and fever. She opens the EarlySignal app, chats with an AI assistant that helps her record symptoms, and instantly sees whether similar cases are appearing nearby.  
-Aiden, an immunocompromised student who checks the app before heading to class to see if respiratory illnesses are rising on campus.
+Priya, a mother in Chicago whose child wakes up with a rash and fever. She opens the EarlySignal app, chats with an AI assistant that helps her record symptoms, and instantly sees whether similar cases are appearing nearby.  
+Alex, an immunocompromised student who checks the app before heading to class to see if respiratory illnesses are rising on campus.
 
 Both use EarlySignal for the same purpose: to protect themselves and their community through faster, smarter information.
 
