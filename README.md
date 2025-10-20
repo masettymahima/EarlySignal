@@ -108,19 +108,16 @@ This approach merges personalized AI care with community-level insight, bridging
 
 ### 3.2 🚨 Alert System — Detecting Emerging Outbreaks
 
-Every report from the chatbot feeds into a unified analytical pipeline hosted in *BigQuery*.  
-The alert system identifies patterns of illness activity across neighborhoods and within localized clusters, combining both into one cohesive feed.
+Every report from the chatbot feeds into a unified analytical pipeline hosted in *BigQuery*. The alert system identifies patterns of illness activity across neighborhoods and within localized clusters, combining both into one cohesive feed.
 
 **1. Every report becomes a data point**  
 When a user submits symptoms through the chatbot, the app logs their approximate location and diagnosis in a secure dataset.
 
 **2. Neighborhood mapping (Tract-Level Trends)**  
-Each report is linked to a census tract — a small geographic area of roughly 1,200–8,000 people that serves as the neighborhood unit.  
-Within each tract, the system tracks daily case counts and flags unusual increases compared to recent baselines.
+Each report is linked to a census tract — a small geographic area of roughly 1,200–8,000 people that serves as the neighborhood unit. Within each tract, the system tracks daily case counts and flags unusual increases compared to recent baselines.
 
 **3. Hotspot detection (Cluster-Based Alerts)**  
-Inside each tract, the system identifies groups of reports that occur close together in both space and time using a *DBSCAN (Density-Based Spatial Clustering of Applications with Noise)* algorithm.  
-This unsupervised clustering method helps detect areas of concentrated illness activity without requiring predefined cluster counts.  
+Inside each tract, the system identifies groups of reports that occur close together in both space and time using a *DBSCAN (Density-Based Spatial Clustering of Applications with Noise)* algorithm. This unsupervised clustering method helps detect areas of concentrated illness activity without requiring predefined cluster counts.  
 - For respiratory illnesses, clusters are detected within roughly *500 meters*  
 - For other diseases, clusters can span up to *5 miles( to capture shared exposure sites such as restaurants, events, or pools
 
@@ -131,8 +128,7 @@ The tract and cluster checks run in tandem, creating a single alert layer that s
 Together, they form a comprehensive picture of local disease activity.
 
 **5. Localized alerts in the app**  
-When thresholds are crossed, the system issues alerts that appear in the user’s app feed and map view.  
-This structure balances neighborhood-level breadth with pinpoint cluster detection, forming a layered early-warning network.
+When thresholds are crossed, the system issues alerts that appear in the user’s app feed and map view. This structure balances neighborhood-level breadth with pinpoint cluster detection, forming a layered early-warning network.
 
 
 
