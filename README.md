@@ -75,9 +75,11 @@ When a user opens the app, the chatbot:
 3. Asks follow-up questions about exposure location (where the illness may have been caught) and current location (where the user is now).  
 4. Offers care recommendations and guidance on when to seek medical help.  
 
-Each interaction contributes an anonymized record including symptoms, diagnosis, and geolocation to a secure data store. As more users participate, the system gains “collective wisdom”, i.e., when multiple nearby users report similar patterns, the model refines its diagnostic confidence and improves local accuracy.
+Each interaction contributes an anonymized record including symptoms, diagnosis, and geolocation to a secure data store. As more users participate, the system gains “collective wisdom,” i.e., when multiple nearby users report similar patterns, the model refines its diagnostic confidence and improves local accuracy.
 
-**Conversation orchestration** uses LangGraph with explicit state and validators:  
+We fed the diagnostic agent curated knowledge of the most common infectious diseases that typically cause community outbreaks, in the form of a standardized disease list and their associated symptoms. For rare or non-infectious conditions, the LLM draws on its own internal medical knowledge base to infer likely causes based on context.
+
+**Conversation orchestration** uses *LangGraph* with explicit state and validators:  
 - State sections include user interaction, history, symptoms, diagnosis, exposure tracking, current location, final outputs, and control flags
 - Validators ensure symptoms, locations, and timing inputs are sensible before advancing
 
@@ -86,19 +88,19 @@ symptom_collection → extract structured symptoms + onset days
 diagnosis → LLM proposes diagnosis; may ask up to three clarifying questions  
 exposure_collection → extract where and when exposure happened  
 location_collection → collect current city/state then venue or landmark  
-bq_submission → package and write report to BigQuery  
+bq_submission → package and write report to *BigQuery*  
 care_advice → return tailored advice and “when to seek professional medical help”
 
 **Routing rules (conditional edges)**  
 Nodes only proceed when required fields are valid; otherwise, the system pauses and waits for user input.  
 Final edges (bq_submission → care_advice → END) are unconditional.
 
-**Confidence refinement via “collective wisdom”**
-Initial diagnosis (e.g., 60%) is later re-scored using local tract spikes & cluster matches in a 14-day window; matches can bump confidence to 70–90% depending on density/recency of similar reports.
-Re-diagnosis prompts can incorporate peer cluster evidence to update both label & confidence.
-
+**Confidence refinement via “collective wisdom”**  
+This component is inspired by the principles of *ensemble modeling*, where multiple independent inputs are combined to produce a stronger, more reliable prediction.  
+EarlySignal applies this idea by aggregating diagnoses and symptom reports across users within shared spatial and temporal windows. If multiple nearby reports exhibit similar diagnostic outcomes, the system dynamically increases the confidence score for that condition (e.g., from 60% to 80–90%), treating community consensus as a reinforcing signal rather than relying on a single agent output.
 
 This approach merges personalized AI care with community-level insight, bridging private experience and public health awareness.
+
 
 **METRICS WILL BE ADDED HERE**
 
@@ -106,30 +108,32 @@ This approach merges personalized AI care with community-level insight, bridging
 
 ### 3.2 🚨 Alert System — Detecting Emerging Outbreaks
 
-Every report from the chatbot feeds into a unified analytical pipeline hosted in *BigQuery*. 
+Every report from the chatbot feeds into a unified analytical pipeline hosted in *BigQuery*.  
 The alert system identifies patterns of illness activity across neighborhoods and within localized clusters, combining both into one cohesive feed.
 
 **1. Every report becomes a data point**  
 When a user submits symptoms through the chatbot, the app logs their approximate location and diagnosis in a secure dataset.
 
 **2. Neighborhood mapping (Tract-Level Trends)**  
-Each report is linked to a census tract—a small geographic area of roughly 1,200–8,000 people that serves as the neighborhood unit.  
+Each report is linked to a census tract — a small geographic area of roughly 1,200–8,000 people that serves as the neighborhood unit.  
 Within each tract, the system tracks daily case counts and flags unusual increases compared to recent baselines.
 
 **3. Hotspot detection (Cluster-Based Alerts)**  
-Inside each tract, the system looks for groups of reports that occur close together in both space and time
-- For respiratory illnesses, clusters are detected within roughly 500 meters
-- For other diseases, clusters can span up to 5 miles to capture shared exposure sites such as restaurants, events, or pools
+Inside each tract, the system identifies groups of reports that occur close together in both space and time using a *DBSCAN (Density-Based Spatial Clustering of Applications with Noise)* algorithm.  
+This unsupervised clustering method helps detect areas of concentrated illness activity without requiring predefined cluster counts.  
+- For respiratory illnesses, clusters are detected within roughly *500 meters*  
+- For other diseases, clusters can span up to *5 miles( to capture shared exposure sites such as restaurants, events, or pools
 
 **4. Merging neighborhood and cluster signals**  
 The tract and cluster checks run in tandem, creating a single alert layer that shows both types of patterns:  
-- Tract-level trends reveal broad neighborhood activity
-- Clusters highlight potential shared locations or exposure events
+- Tract-level trends reveal broad neighborhood activity 
+- DBSCAN-derived clusters highlight potential shared locations or exposure events
 Together, they form a comprehensive picture of local disease activity.
 
 **5. Localized alerts in the app**  
 When thresholds are crossed, the system issues alerts that appear in the user’s app feed and map view.  
 This structure balances neighborhood-level breadth with pinpoint cluster detection, forming a layered early-warning network.
+
 
 
 
