@@ -113,25 +113,25 @@ Every report from the chatbot feeds into a unified analytical pipeline hosted in
 **1. Every report becomes a data point**  
 When a user submits symptoms through the chatbot, the app logs their approximate location and diagnosis in a secure dataset.
 
-**2. Neighborhood mapping (Tract-Level Trends)**  
-Each report is linked to a census tract — a small geographic area of roughly 1,200–8,000 people that serves as the neighborhood unit. Within each tract, the system tracks daily case counts and flags unusual increases compared to recent baselines.
+**2. Neighborhood mapping (Tract-Assigment)**  
+Each report is linked to a census tract — a small geographic area of roughly 1,200–8,000 people that serves as the neighborhood unit.
 
 **3. Hotspot detection (Cluster-Based Alerts)**  
-Inside each tract, the system identifies groups of reports that occur close together in both space and time using a *DBSCAN (Density-Based Spatial Clustering of Applications with Noise)* algorithm. This unsupervised clustering method helps detect areas of concentrated illness activity without requiring predefined cluster counts.  
+The system identifies groups of reports that occur close together in both space and time using a *DBSCAN (Density-Based Spatial Clustering of Applications with Noise)* algorithm. This unsupervised clustering method helps detect areas of concentrated illness activity by grouping reports and creating clusters with a minimum of 3 data points.  
 - For respiratory illnesses, clusters are detected within roughly *500 meters*  
 - For other diseases, clusters can span up to *5 miles( to capture shared exposure sites such as restaurants, events, or pools
 
-**4. Merging neighborhood and cluster signals**  
-The tract and cluster checks run in tandem, creating a single alert layer that shows both types of patterns:  
-- Tract-level trends reveal broad neighborhood activity 
-- DBSCAN-derived clusters highlight potential shared locations or exposure events
-Together, they form a comprehensive picture of local disease activity.
+**4. ⁠⁠Baselines are computed within each cluster**  
+Once clusters are detected, the system evaluates how current case counts compare to historical baselines for that cluster.  
+This step ensures that alerts are not triggered by isolated or routine fluctuations but by genuine anomalies in disease activity.
 
 **5. Localized alerts in the app**  
-When thresholds are crossed, the system issues alerts that appear in the user’s app feed and map view. This structure balances neighborhood-level breadth with pinpoint cluster detection, forming a layered early-warning network.
+When outbreak thresholds are met, alerts are automatically issued to users whose assigned tracts overlap or are adjacent to the affected clusters.  
+An alert is generated when:  
+- More than *60%* of reports within a tract are diagnosed as the same disease, and 
+- At least *three similar reports* are found within a single DBSCAN cluster.  
 
-
-
+Users currently located within or near the impacted tract receive a push alert and can view the affected area directly on the in-app map. This design connects individual reports, local neighborhood trends, and cluster detection into a layered early-warning system, ensuring that community alerts are both targeted and timely.
 
 ---
 
