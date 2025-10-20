@@ -54,7 +54,7 @@ EarlySignal brings together three interconnected systems:
 
 
 <div align="center">
-  <img src="documents/images/earlysignal_workflow.png">
+  <img src="documents/images/earlysignal_workflow_diagram.png">
 </div>
 
 Together, these components form an end-to-end loop: 
